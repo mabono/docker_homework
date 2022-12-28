@@ -23,17 +23,6 @@ def get_value(key):
 def set_value(key, value):
     r.set(key,value)
     return f"Set {key} to {value}"
- 
-# @app.route("/all")
-# def get_all():
-#     if not r.keys():
-#         return {} 
-#     else:
-#         keys = r.keys()
-#         db_list = []
-#         for key in keys:
-#             db_list.append(f"{key.decode('ascii')}: {r.get(key).decode('ascii')}")
-#         return f"{db_list}"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
