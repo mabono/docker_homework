@@ -9,8 +9,9 @@ WORKDIR /app
 COPY . /app
 
 #TEST
+ARG TEST_CASE=test_add_pass.py
 ARG RUN_TESTS=true
-RUN if [ "$RUN_TESTS" = "true" ]; then (echo "\n testing \n" && python test_add.py) && (echo "test passed" && exit 0) || (echo "test failed" && exit 1); fi
+RUN if [ "$RUN_TESTS" = "true" ]; then (echo "\n testing \n" && python ${TEST_CASE}) && (echo "test passed" && exit 0) || (echo "test failed" && exit 1); fi
 
 # Expose port 5000
 EXPOSE 5000

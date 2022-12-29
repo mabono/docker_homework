@@ -24,5 +24,15 @@ def set_value(key, value):
     r.set(key,value)
     return f"Set {key} to {value}"
 
+@app.route("/getall")
+def get_all():
+    keys = r.keys()
+    values = [r.get(key) for key in keys]
+    datab = zip(keys, values)
+    s = ""
+    for x in datab:
+      s += f"{x[0].decode('ascii')}: {x[1].decode('ascii')} <br/>"
+    return s
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

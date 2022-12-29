@@ -1,0 +1,16 @@
+This is an instruction on how to run this task properly
+
+1. Directory task3 should be the working directory for this project, please navigate yourself to it
+2. BUILD - run command: ' docker-compose build '
+3. SET UP - run command: ' docker-compose up '
+
+4. If everything worked, you should see the connection made in terminal. Move to the browser and type: ' localhost:5000 ' to connect
+5. You should be greeted with a "Hello, World!" statement, which is a result of simplest method created for the app. Here is a list of possible methods:
+    --- Each method should be executed by typing it in the address bar, right after the port -> 'localhost:5000_____' ---
+    - (/) print out "Hello, World!"
+    - (/set/<key>/<value>) sets a desired <value> for specified <key>
+    - (/get/<key>) returns the value of specified <key>
+    - (/getall) returns all created pairs of keys and values
+
+    --- Example: localhost:5000/set/name/maciej ---
+

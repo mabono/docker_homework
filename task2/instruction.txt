@@ -1,0 +1,11 @@
+This is an instruction on how to run this task properly
+
+1. Directory task2 should be the working directory for this project, please navigate to it
+
+2. In the Dockerfile, there are two variables that define the process of building:
+    - RUN_TESTS(default=true) - determines whether the test should be executed during image building or not. It takes arguments: true/false
+    - TEST_CASE(default=test_add_pass.py) - determines which test should be executed: designed to pass or fail. It was created to improve the verification whether the build will stop, as desired, during the process. It takes arguments: test_add_pass.py/test_add_fail.py
+
+4. BUILD - simply run the following command:
+    - ' docker build -t <image_name> . --build-arg RUN_TESTS=<true/false> --build-arg TEST_CASE=<test_add_pass.py/test_add_fail.py> '
+    By default, if we ommit changing the arguments, it will run a properly designed test, meant to pass, and the build will be successfull.
