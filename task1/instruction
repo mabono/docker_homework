@@ -1,7 +1,7 @@
 This is an instruction on how to run this task properly
 
 1. Directory task1 should be the working directory for this project
-2. Download config directoryu with config.yaml file from the repository and save it's local path
+2. Download config directory with config.yaml file from the repository and save it's local path
 
 3. BUILD IMAGE - to build an image, navigate to the local directory task1 (conatains hom1.py, docker files and empty config dir).
     In terminal, run command: ' docker build -t <image-name> . ' to build and image
