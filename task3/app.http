@@ -1,0 +1,7 @@
+GET http://localhost:3000/
+
+POST http://localhost:3000/set/name/bob
+
+GET http://localhost:3000/set/name
+
+GET http://localhost:3000/getall

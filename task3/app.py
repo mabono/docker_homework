@@ -10,21 +10,21 @@ redis_password = os.environ.get("REDIS_PASSWORD", None)
 
 r = redis.Redis(host=redis_host, port=redis_port, password=redis_password)
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def hello():
     return "Hello, World!"
 
-@app.route("/get/<key>")
+@app.route("/get/<key>", methods=['GET'])
 def get_value(key):
     value = r.get(key)
     return value if value else "Key not found"
 
-@app.route("/set/<key>/<value>")
+@app.route("/set/<key>/<value>", methods=['POST'])
 def set_value(key, value):
     r.set(key,value)
     return f"Set {key} to {value}"
 
-@app.route("/getall")
+@app.route("/getall", methods=['GET'])
 def get_all():
     keys = r.keys()
     values = [r.get(key) for key in keys]
