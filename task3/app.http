@@ -1,7 +1,7 @@
-GET http://localhost:3000/
+#GET http://localhost:5000/
 
-POST http://localhost:3000/set/name/bob
+#POST http://localhost:5000/set/name2/bob2
 
-GET http://localhost:3000/set/name
+#GET http://localhost:5000/get/name
 
-GET http://localhost:3000/getall
+GET http://localhost:5000/getall
